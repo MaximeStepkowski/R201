@@ -39,5 +39,12 @@ public class CalculatriceSimple{
 
         System.out.println(x1 + "=" + x1.valeur()); //doit afficher : (8 * 2) = 16
         System.out.println(x2 + "=" + x2.valeur()); //doit afficher : (0 - 4) = 0
+
+        Expression trois = new Nombre(3) ;
+        Expression dixSept = new Nombre(17) ;
+        Expression s = new Soustraction(dixSept, deux) ;
+        Expression a = new Addition(deux, trois) ;
+        Expression d = new Division(s, a) ;
+        System.out.println(d + " = " + d.valeur()) ; // affiche ((17 - 2) / (2 + 3)) = 3
     }
 }

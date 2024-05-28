@@ -1,11 +1,11 @@
-public class Nombre {
+public class Nombre extends Expression{
     private int valeurNombre;
 
     public Nombre(int nb){
         this.valeurNombre = nb;
     }
 
-    public int valeur(){
+    public double valeur(){
         return valeurNombre;
     }
 

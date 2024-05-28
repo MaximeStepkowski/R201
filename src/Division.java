@@ -1,5 +1,5 @@
 public class Division extends Operation{
-    public Division(Nombre op1,Nombre op2){
+    public Division(Expression op1, Expression op2){
         super(op1,op2);
         if(op2.valeur() == 0) {
             throw new ArithmeticException("Division par zéro interdite !");
@@ -7,7 +7,7 @@ public class Division extends Operation{
     }
 
     @Override
-    public int valeur() {
+    public double valeur() {
         return getOperande1().valeur() / getOperande2().valeur();
     }
 

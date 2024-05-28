@@ -1,10 +1,10 @@
 public class Soustraction extends Operation{
-    public Soustraction (Nombre op1,Nombre op2){
+    public Soustraction (Expression op1,Expression op2){
         super(op1,op2);
     }
 
     @Override
-    public int valeur() {
+    public double valeur() {
         return getOperande1().valeur() - getOperande2().valeur();
     }
 
