@@ -56,16 +56,18 @@ public class CalculatriceSimple{
             return new Nombre(Integer.parseInt(e));
         }
         
-        longueur=e.length();
+        int longueur=e.length();
 
         for (int i = longueur - 1; i >= 0; i--) {
             char lettre = e.charAt(i);
 
-            if (c == '+' || c == '-' || c == '*' || c == '/') {
+            if (lettre == '+' || lettre == '-' || lettre == '*' || lettre == '/') {
                 Expression gauche = fabriqueExpression(e.substring(0, i));
                 Expression droite = fabriqueExpression(e.substring(i + 1));
 
-            }
+                if (lettre == '+') {
+                    return new Addition(gauche, droite);
+                } 
         throw new IllegalArgumentException("Invalid expression: " + e);
     }
 }
